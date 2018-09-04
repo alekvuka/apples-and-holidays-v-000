@@ -122,7 +122,7 @@ def all_supplies_in_holidays(holiday_hash)
         holiday = holiday.gsub(/\w+/, &:capitalize)
         puts "  #{holiday}: #{supplies.join(", ")}"
       end
-    elsif season == :spring
+    else
       holidays.each do |holiday, supplies|
         holiday = holiday.to_s
         holiday = holiday.gsub("_", " ")
