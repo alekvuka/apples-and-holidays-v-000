@@ -125,6 +125,7 @@ def all_supplies_in_holidays(holiday_hash)
         puts "  #{holiday}: #{supplies.join(", ")}"
       end
     else
+      puts "Spring:"
       holidays.each do |holiday, supplies|
         holiday = holiday.to_s
         holiday = holiday.gsub("_", " ")
