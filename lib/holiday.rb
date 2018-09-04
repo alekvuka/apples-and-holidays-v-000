@@ -104,7 +104,7 @@ def all_supplies_in_holidays(holiday_hash)
       puts "Winter:"
       holidays.each do |holiday, supplies|
         holiday = holiday.to_s
-        holiday.gsub(/\w+/, &:capitalize)
+        holiday = holiday.gsub(/\w+/, &:capitalize)
         puts "  #{holiday}: #{supplies.join(", ")}"
 
 
