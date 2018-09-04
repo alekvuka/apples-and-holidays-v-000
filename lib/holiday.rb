@@ -104,17 +104,32 @@ def all_supplies_in_holidays(holiday_hash)
       puts "Winter:"
       holidays.each do |holiday, supplies|
         holiday = holiday.to_s
-        holiday = holiday.gsub("_", " ") 
+        holiday = holiday.gsub("_", " ")
         holiday = holiday.gsub(/\w+/, &:capitalize)
         puts "  #{holiday}: #{supplies.join(", ")}"
-
-
-      #  binding.pry
-
-
-
       end
-    end
+    elsif season == :summer
+      holidays.each do |holiday, supplies|
+        holiday = holiday.to_s
+        holiday = holiday.gsub("_", " ")
+        holiday = holiday.gsub(/\w+/, &:capitalize)
+        puts "  #{holiday}: #{supplies.join(", ")}"
+      end
+    elsif season == :fall
+      holidays.each do |holiday, supplies|
+        holiday = holiday.to_s
+        holiday = holiday.gsub("_", " ")
+        holiday = holiday.gsub(/\w+/, &:capitalize)
+        puts "  #{holiday}: #{supplies.join(", ")}"
+      end
+    else season == spring
+      holidays.each do |holiday, supplies|
+        holiday = holiday.to_s
+        holiday = holiday.gsub("_", " ")
+        holiday = holiday.gsub(/\w+/, &:capitalize)
+        puts "  #{holiday}: #{supplies.join(", ")}"
+      end
+    end 
   end
 end
 
